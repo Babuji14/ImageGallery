@@ -1,45 +1,38 @@
 document.addEventListener("DOMContentLoaded",function(){
-    const img = document.querySelectorAll(".img");
-    const model = document.querySelector(".model");
-    const close = document.querySelector(".close");
-    const modelimg=document.querySelector(".model-img");
-    const modeltext=document.querySelector(".model-text");
+    const img=document.querySelectorAll(".img");
+    const model=document.querySelector(".model");
+    const close=document.querySelector(".close");
     let index=0;
-    const prevbtn=document.querySelector(".btn-prev");
-    const nextbtn=document.querySelector(".btn-next");
+    const modelImg=document.querySelector(".model-img");
+    const modelText=document.querySelector(".model-text");
+    const btnNext=document.querySelector(".btn-next");
+    const btnPrev=document.querySelector(".btn-prev");
 
-    //Image Selection
-    img.forEach((imgs, imgindex) => {
-        imgs.addEventListener("click", function () {
+    img.forEach((imgs,i) =>{
+        imgs.addEventListener("click",function(){
             model.classList.add("active");
-            index=imgindex;
-            updateimage();
+            index=i;
+            updateimages()
         });
     });
 
-    //Update Images
-    function updateimage(){
-        const updatedimgs=img[index];
-        modelimg.src = updatedimgs.querySelector("img").src;
-        modeltext.textContent=updatedimgs.querySelector("span").textContent;
-    }
-
-    //close Button
-    close.addEventListener("click", function () {
+    close.addEventListener("click", function(){
         model.classList.remove("active");
     });
 
-    //Next Button
-    nextbtn.addEventListener("click", function(){
-        index=index+1 >= img.length ? 0 : index+1;
-        updateimage()
+    function updateimages(){
+        const updateimage=img[index];
+        modelImg.src=updateimage.querySelector("img").src;
+        modelText.textContent=updateimage.querySelector("span").textContent;
+    }
+
+    btnNext.addEventListener("click", function(){
+        index=index+1 >=img.length ? 0 : index+1;
+        updateimages();
     });
 
-    //Previous Button
-    prevbtn.addEventListener("click", function(){
-        index=index-1 < 0 ? img.length - 1 : index-1;
-        updateimage()
+    btnPrev.addEventListener("click", function(){
+        index=index-1 < 0 ? img.length :index-1;
+        updateimages();
     });
 });
-
-
