@@ -86,6 +86,10 @@
     bottom: 250px;
     left: -50px;
 }
+button{
+    outline: none;
+    border: none;
+}
 .btn-next{
     position: absolute;
     bottom: 250px;
@@ -96,3 +100,144 @@
     padding: 10px;
     cursor: pointer;
 }
+@media (min-width: 1200px) {
+    
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    /* Styles for desktops */
+    .images img{
+        width: 250px;
+        height: 220px;
+    }
+    .model .close{
+        top: 10px;
+        right: 100px;
+    }
+    .model-content img {
+        width: 90%;
+        height: 90%;
+        margin: auto;
+    }
+    .model-text{
+        margin-top: 10px;
+    }
+    .btn-prev{
+        position: absolute;
+        bottom: 200px;
+        left: -40px;
+    }
+    .btn-next{
+        bottom: 200px;
+        right: -40px;
+    }
+}
+  
+@media (max-width: 991px) and (min-width: 768px) {
+    /* Styles for tablets in portrait mode */
+    /* Styles for desktops */
+    .images img{
+        width: 200px;
+        height: 200px;
+    }
+    .model .close{
+        top: 10px;
+        right: 70px;
+    }
+    .model{
+
+    }
+    .model-content img {
+        width: 80%;
+        height: 80%;
+        margin: auto;
+        margin-top:30px;
+    }
+    .model-text{
+        margin-top: 10px;
+    }
+    .btn-prev{
+        bottom: 200px;
+        left: 30px;
+    }
+    .btn-next{
+        bottom: 200px;
+        right: 30px;
+    }
+}
+@media (max-width: 767px) and (min-width: 600px) {
+    /* Styles for tablets in landscape mode */
+    body{
+        padding: 30px;
+    }
+    .model{
+        width: 120vw;
+        height: 120vh;
+    }
+    .images{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .images img{
+        width: 270px;
+        height: 250px;
+    }
+    .model .close{
+        top: 30px;
+        right: 150px;
+    }
+    .model-content {
+        width: 800px;
+        height: 400px;
+        position: relative;
+    }
+    .model-content img {
+        width: 350px;
+        height: 400px;
+        margin: auto;
+        margin-right: 250px;
+    }
+    .model-text{
+        margin-top: 10px;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .btn-prev{
+        position: absolute;
+        bottom: 200px;
+        left: 150px;
+    }
+    button{
+        outline: none;
+        border: none;
+    }
+    .btn-next{
+        position: absolute;
+        bottom: 200px;
+        right:200px;
+    }
+    
+}
+
+@media (max-width: 599px) and (min-width: 481px) {
+    /* Styles for large mobile devices */
+    body{
+        padding: 30px;
+    }
+    .images{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .container{
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    /* Styles for mobile devices */
+}
+
+@media (max-width: 319px) {
+    /* Styles for small mobile devices */
+}
+  
