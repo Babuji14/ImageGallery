@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded",function(){
     const img=document.querySelectorAll(".img");
-    const model=document.querySelector(".model");
+    const model=document.querySelector(".model-container");
     const close=document.querySelector(".close");
     let index=0;
     const modelImg=document.querySelector(".model-img");
